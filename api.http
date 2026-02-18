@@ -1,0 +1,22 @@
+@baseUrl = http://localhost:3000
+
+### Get All Subjects
+GET {{baseUrl}}/api/subjects
+
+### Search by Name (Prefix)
+GET {{baseUrl}}/api/subjects?search=Cha
+
+### Search with Limit
+GET {{baseUrl}}/api/subjects?search=Cha&limit=3
+
+### Fuzzy Search (Levenshtein)
+GET {{baseUrl}}/api/subjects?search=Javl
+
+### Get Images by IDs
+GET {{baseUrl}}/api/images?ids=1,101,103
+
+### Get Images - Multiple
+GET {{baseUrl}}/api/images?ids=1,5,10,15,20
+
+### Error - Missing IDs
+GET {{baseUrl}}/api/images
